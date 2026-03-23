@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danish Wani Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3b82f6;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 42px;
+}
+
+header p {
+    margin-top: 10px;
+    color: #94a3b8;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #3b82f6;
+    padding: 8px 14px;
+    margin: 6px;
+    border-radius: 20px;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 8px 14px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #2563eb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="images/profile.jpg" class="profile-pic">
+    <h1>Danish Wani</h1>
+    <p>Data Analyst | Python | SQL | Data Science Learner</p>
+
+    <p>
+        <a href="https://github.com/danishwani121-ui" class="button">GitHub</a>
+        <a href="https://linkedin.com/in/danish-wani-2a34a1361" class="button">LinkedIn</a>
+        <a href="resume.pdf" class="button">Download Resume</a>
+    </p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+        I am a Data Science learner with a background in Business Administration.
+        I build real-world projects using Python, SQL, and data visualization to uncover insights and solve business problems.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Data Analysis</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Visualization</span>
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Netflix Data Analysis</h3>
+        <img src="images/netflix/netflix_content_growth.png">
+        <img src="images/netflix/netflix_movies_vs_tvshows.png">
+        <img src="images/netflix/netflix_top_countries.png">
+        <img src="images/netflix/netflix_ratings_distribution.png">
+        <p>Analyzed Netflix dataset to understand trends and insights.</p>
+        <a href="https://github.com/danishwani121-ui/netflix-data-analysis" class="button">View Project</a>
+    </div>
+
+    <div class="card">
+        <h3>Toyota Dataset Analysis</h3>
+        <img src="images/toyota/toyota_price_distribution.png">
+        <img src="images/toyota/toyota_fuel_type.png">
+        <img src="images/toyota/toyota_price_vs_mileage.png">
+        <p>Analyzed car pricing, fuel types, and mileage trends.</p>
+        <a href="https://github.com/danishwani121-ui" class="button">View Project</a>
+    </div>
+
+    <div class="card">
+        <h3>Sales Data Analysis</h3>
+        <img src="images/sales/sales_monthly_trend.png">
+        <img src="images/sales/monthly_profit_analysis.png">
+        <p>Identified sales and profit trends using visualization.</p>
+        <a href="https://github.com/danishwani121-ui/sales-data-visualization" class="button">View Project</a>
+    </div>
+
+    <div class="card">
+        <h3>E-commerce Data Analysis</h3>
+        <img src="images/ecommerce/monthly_sales.png">
+        <img src="images/ecommerce/sales_by_category.png">
+        <img src="images/ecommerce/sales_by_region.png">
+        <img src="images/ecommerce/top_products.png">
+        <img src="images/ecommerce/profit_by_category.png">
+        <p>Analyzed e-commerce data for sales and product insights.</p>
+        <a href="https://github.com/danishwani121-ui/ecommerce-analysis" class="button">View Project</a>
+    </div>
+
+    <div class="card">
+        <h3>Student Marks Analyzer</h3>
+        <p>
+        Developed a Python-based system to analyze student performance and generate reports.
+        </p>
+        <a href="https://github.com/danishwani121-ui/student--marks--analyzer" class="button">View Project</a>
+    </div>
+
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: wanidanish1304@gmail.com</p>
+        <p>Location: Srinagar, India</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Danish Wani</p>
+</footer>
+
+</body>
+</html>
