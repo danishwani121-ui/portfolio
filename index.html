@@ -1,129 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Danish Wani | Data Analyst</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danish Wani | Data Analyst</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0f172a;
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
+  scroll-behavior: smooth;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #1e293b, #020617);
-    }
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
 
-    header img {
-      width: 130px;
-      border-radius: 50%;
-      border: 3px solid #38bdf8;
-    }
+nav a {
+  margin: 0 15px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    header h1 {
-      margin: 10px 0;
-      font-size: 36px;
-    }
+/* HEADER */
+header {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #1e293b, #020617);
+}
 
-    #typing {
-      color: #38bdf8;
-      font-weight: bold;
-    }
+header img {
+  width: 130px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+}
 
-    .btn {
-      display: inline-block;
-      margin: 8px;
-      padding: 10px 20px;
-      background: #38bdf8;
-      color: black;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+header h1 {
+  font-size: 42px;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-      background: #0ea5e9;
-    }
+#typing {
+  color: #38bdf8;
+  font-weight: bold;
+}
 
-    section {
-      padding: 50px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.tagline {
+  color: #94a3b8;
+}
 
-    h2 {
-      border-bottom: 2px solid #38bdf8;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    .skills span {
-      display: inline-block;
-      background: #1e293b;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 6px;
-    }
+.btn:hover {
+  transform: scale(1.08);
+}
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
+/* SECTION */
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
 
-    .card {
-      background: rgba(30, 41, 59, 0.7);
-      padding: 15px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-    }
+h2 {
+  border-bottom: 2px solid #38bdf8;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      color: #94a3b8;
-    }
-  </style>
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.7);
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+  <a href="#">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <header>
   <img src="images/profile.jpg">
   <h1>Danish Wani</h1>
+
   <p id="typing"></p>
+  <p class="tagline">I help businesses make better decisions using data.</p>
 
   <div>
-    <a class="btn" href="resume.pdf" target="_blank">📄 Resume</a>
-    <a class="btn" href="https://github.com/danishwani121-ui" target="_blank">💻 GitHub</a>
-    <a class="btn" href="https://www.linkedin.com/in/danish-wani-2a34a1361" target="_blank">🔗 LinkedIn</a>
+    <a class="btn" href="resume.pdf">Resume</a>
+    <a class="btn" href="https://github.com/danishwani121-ui">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/danish-wani-2a34a1361">LinkedIn</a>
   </div>
 </header>
 
 <section>
   <h2>About Me</h2>
   <p>
-    I am an aspiring Data Analyst with a background in Business Administration.
-    I specialize in Python, SQL, and data visualization to extract meaningful insights from data.
+    Data Analyst with a business mindset. I transform raw data into actionable insights using Python, SQL, and dashboards.
   </p>
 </section>
 
@@ -133,68 +171,64 @@
     <span>Python</span>
     <span>SQL</span>
     <span>Pandas</span>
-    <span>Data Visualization</span>
-    <span>Excel</span>
     <span>Power BI</span>
   </div>
 </section>
 
-<section>
+<section id="projects">
   <h2>Projects</h2>
-
   <div class="projects">
 
     <div class="card">
-      <h3>Toyota Analysis</h3>
-      <img src="images/toyota/toyota_price_vs_mileage.png">
-      <p>Analysis of price vs mileage and fuel trends.</p>
-      <a class="btn" href="https://github.com/danishwani121-ui/toyota-analysis" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Netflix Analysis</h3>
-      <img src="images/netflix/netflix_content_by_country.png">
-      <p>Content trends and ratings analysis.</p>
-      <a class="btn" href="https://github.com/danishwani121-ui/netflix-data" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Ecommerce Analysis</h3>
-      <img src="images/ecommerce/monthly_sales.png">
-      <p>Sales and profit insights dashboard.</p>
-      <a class="btn" href="https://github.com/danishwani121-ui/ecommerce-analysis" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
       <h3>Sales Analysis</h3>
-      <img src="images/sales/monthly_profit_analysis.png">
-      <p>Monthly profit and trend analysis.</p>
-      <a class="btn" href="https://github.com/danishwani121-ui/sales-analysis" target="_blank">View Project</a>
+      <p>Identified seasonal trends impacting profit.</p>
+      <a class="btn" href="https://github.com/danishwani121-ui/sales-analysis">View</a>
+    </div>
+
+    <div class="card">
+      <h3>Toyota Analysis</h3>
+      <p>Analyzed price vs mileage relationships.</p>
+      <a class="btn" href="https://github.com/danishwani121-ui/toyota-analysis">View</a>
     </div>
 
   </div>
 </section>
 
-<section>
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: danishwani1304@gmail.com</p>
+
+  <a class="btn" href="tel:+917889439280">Call Me</a>
+  <a class="btn" href="mailto:danishwani1304@gmail.com">Email Me</a>
 </section>
 
 <footer>
-  <p>©️ 2026 Danish Wani</p>
+  <p>© 2026 Danish Wani</p>
 </footer>
 
 <script>
-  const text = "Data Analyst | Python | SQL | Power BI";
-  let i = 0;
-  function type() {
-    if (i < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, 50);
-    }
+const text = "Data Analyst | Business Problem Solver";
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 40);
   }
-  type();
+}
+type();
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
 </script>
 
 </body>
